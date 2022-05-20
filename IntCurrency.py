@@ -1,11 +1,12 @@
 def IntCurrency(n):
     s = [x for x in str(n)]
-    if len(s) >= 3: 
-        s.insert(len(s)-2,".") 
+    l = len(s)
+    if l >= 3: 
+        s.insert(l-2,".") 
         return(''.join(s))
     else:
         t = ["0","."]
-        if len(s) == 2:
+        if l == 2:
             t.extend(s)
         else:
             t.extend(["0", s[0]])
