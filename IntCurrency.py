@@ -6,8 +6,7 @@ def IntCurrency(n):
     else:
         t = ["0","."]
         if len(s) == 2:
-            for n in s: t.append(n)
+            t.extend(s)
         else:
-            t.append("0")
-            t.append(s[0])
+            t.extend(["0", s[0]])
         return(''.join(t))
